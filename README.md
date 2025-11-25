@@ -43,3 +43,54 @@ POST	    /cart	        Create a new cart
 GET	        /cart/:id	    Get cart by ID
 PUT	        /cart/:id	    Update cart by ID
 DELETE	    /cart/:id	    Delete cart by ID
+
+
+Examples
+## POST
+http://localhost/cart
+body : {
+  "cartId": "cart-005",
+  "userId": "user-202",
+  "items": [
+    {
+      "itemId": "ci-458",
+      "productId": "plan-125",
+      "qty": 1,
+      "unitPrice": 39.99,
+      "metadata": {
+        "color": "red",
+        "size": "M"
+      }
+    }
+  ]
+}
+
+## GET
+http://localhost/cart/cart-002
+
+## PUT
+http://localhost/cart/cart-002
+body : {
+  "items": [
+    {
+      "itemId": "ci-456",
+      "productId": "plan-123",
+      "qty": 3,
+      "unitPrice": 29.99,
+      "metadata": {
+        "giftWrap": true
+      }
+    },
+    {
+      "itemId": "ci-459",
+      "productId": "plan-126",
+      "qty": 1,
+      "unitPrice": 49.99,
+      "metadata": {}
+    }
+  ]
+}
+
+
+## DELETE
+http://localhost/cart/cart-005
