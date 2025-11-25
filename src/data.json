@@ -1,0 +1,135 @@
+{
+    "authentication": {
+        "token": {
+            "accessToken": "abc123xyz",
+            "expiresIn": 3600,
+            "tokenType": "Bearer"
+        }
+    },
+    "users": [
+        {
+            "userId": "user-123",
+            "name": "John Doe",
+            "email": "john.doe@example.com"
+        },
+        {
+            "userId": "user-456",
+            "name": "Jane Smith",
+            "email": "jane.smith@example.com"
+        },
+        {
+            "userId": "user-789",
+            "name": "Alice Johnson",
+            "email": "alice.johnson@example.com"
+        },
+        {
+            "userId": "user-101",
+            "name": "Bob Brown",
+            "email": "bob.brown@example.com"
+        }
+    ],
+    "carts": [
+        {
+            "cartId": "cart-001",
+            "userId": "user-123",
+            "items": []
+        },
+        {
+            "cartId": "cart-002",
+            "userId": "user-456",
+            "items": [
+                {
+                    "itemId": "ci-456",
+                    "productId": "plan-123",
+                    "qty": 1,
+                    "unitPrice": 29.99,
+                    "metadata": {}
+                }
+            ]
+        },
+        {
+            "cartId": "cart-003",
+            "userId": "user-789",
+            "items": [
+                {
+                    "itemId": "ci-457",
+                    "productId": "plan-124",
+                    "qty": 2,
+                    "unitPrice": 19.99,
+                    "metadata": {}
+                }
+            ]
+        },
+        {
+            "cartId": "cart-004",
+            "userId": "user-101",
+            "items": []
+        }
+    ],
+    "orders": [
+        {
+            "orderId": "order-001",
+            "status": "completed",
+            "cartId": "cart-002",
+            "paymentMethodId": "pm-789"
+        },
+        {
+            "orderId": "order-002",
+            "status": "pending",
+            "cartId": "cart-003",
+            "paymentMethodId": "pm-790"
+        },
+        {
+            "orderId": "order-003",
+            "status": "completed",
+            "cartId": "cart-004",
+            "paymentMethodId": "pm-791"
+        }
+    ],
+    "catalog": {
+        "products": [
+            {
+                "productId": "plan-123",
+                "name": "Premium Plan",
+                "description": "Access to premium features.",
+                "price": 29.99,
+                "sku": "PLAN-XL"
+            },
+            {
+                "productId": "plan-124",
+                "name": "Basic Plan",
+                "description": "Access to basic features.",
+                "price": 19.99,
+                "sku": "PLAN-L"
+            }
+        ]
+    },
+    "pricing": {
+        "quote": {
+            "linePrices": [
+                {
+                    "productId": "plan-123",
+                    "price": 29.99,
+                    "qty": 1,
+                    "total": 29.99
+                },
+                {
+                    "productId": "plan-124",
+                    "price": 19.99,
+                    "qty": 2,
+                    "total": 39.98
+                }
+            ],
+            "taxes": 5.00,
+            "total": 74.97
+        }
+    },
+    "reservations": {
+        "reservationIds": [
+            "res-001",
+            "res-002",
+            "res-003",
+            "res-004"
+        ]
+    }
+}
